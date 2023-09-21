@@ -7,55 +7,75 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## About Laravel
+# Ecommerce Project Setup
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+This repository contains the source code for an e-commerce project. Follow the instructions below to set up the project on your local development environment.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Prerequisites
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Git installed on your system
+- Composer installed on your system
+- Node.js and npm installed on your system
+- PHP and Laravel installed on your system
+- A database server (e.g., MySQL) installed and running
 
-## Learning Laravel
+## Installation
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+1. Clone the repository:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+   ```bash
+   git clone git@github.com:chaminduonline/ecommerce.git
 
-## Laravel Sponsors
+2. Change to the project directory:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+   ```bash
+   cd ecommerce
 
-### Premium Partners
+3. Install PHP dependencies using Composer:
+    
+    ```bash
+    composer install
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+4. Install JavaScript dependencies using npm:
 
-## Contributing
+    ```bash
+    npm install
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+5. Compile assets using npm:
 
-## Code of Conduct
+    ```bash
+    npm run dev
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+6. Update the database configuration:
 
-## Security Vulnerabilities
+    ```bash
+    DB_CONNECTION=mysql
+    DB_HOST=your_database_host
+    DB_PORT=your_database_port
+    DB_DATABASE=your_database_name
+    DB_USERNAME=your_database_username
+    DB_PASSWORD=your_database_password
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+7. Run database migrations to create tables:
 
-## License
+    ```bash
+    php artisan migrate
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+8. Seed the database with initial data
+
+    ```bash
+    php artisan db:seed --class=CategorySeeder
+    php artisan db:seed --class=ProductSeeder
+    php artisan db:seed --class=ImageLinksSeeder
+    php artisan db:seed --class=VariationAttributeSeeder
+    php artisan db:seed --class=ProductVariationSeeder
+    php artisan db:seed --class=ProductVariationAttributeSeeder
+
+
+You can now start using the e-commerce project by running it on your local development server:
+
+    ```bash
+    php artisan serve
+
+
+Visit http://localhost:8000 in your web browser to access the application.
