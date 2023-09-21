@@ -69,7 +69,6 @@ This repository contains the source code for an e-commerce project. Follow the i
 
 You can now start using the e-commerce project by running it on your local development server:
 
-    ```bash
     php artisan serve
 
 
