@@ -15,8 +15,8 @@ This repository contains the source code for an e-commerce project. Follow the i
 
 - Git installed on your system
 - Composer installed on your system
-- Node.js and npm installed on your system
-- PHP and Laravel installed on your system
+- Node.js and npm installed on your system NodeJS 18
+- PHP and Laravel installed on your system PHP 7.3 / Laravel 7
 - A database server (e.g., MySQL) installed and running
 
 ## Installation
@@ -64,12 +64,7 @@ This repository contains the source code for an e-commerce project. Follow the i
 8. Seed the database with initial data
 
     ```bash
-    php artisan db:seed --class=CategorySeeder
-    php artisan db:seed --class=ProductSeeder
-    php artisan db:seed --class=ImageLinksSeeder
-    php artisan db:seed --class=VariationAttributeSeeder
-    php artisan db:seed --class=ProductVariationSeeder
-    php artisan db:seed --class=ProductVariationAttributeSeeder
+    php artisan db:seed
 
 
 You can now start using the e-commerce project by running it on your local development server:
