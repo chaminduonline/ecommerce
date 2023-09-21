@@ -15,7 +15,7 @@ This repository contains the source code for an e-commerce project. Follow the i
 
 - Git installed on your system
 - Composer installed on your system
-- Node.js and npm installed on your system NodeJS 18
+- Node.js and npm installed on your system NodeJS v18.17.1 / npm v9.6.7
 - PHP and Laravel installed on your system PHP 7.3 / Laravel 7
 - A database server (e.g., MySQL) installed and running
 
